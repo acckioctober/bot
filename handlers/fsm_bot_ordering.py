@@ -10,7 +10,7 @@ from handlers.button import (get_keyboard_for_cake,
                             get_keybord_for_payment_methods,
                             get_keybord_for_submit)
 from database.bot_db import sql_command_insert
-from keyboards.bottons import get_keyboard_for_start_order
+from keyboards.buttons import get_keyboard_for_start_order
 
 class FSMAdmin(StatesGroup):
     cake = State()

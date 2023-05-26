@@ -3,18 +3,21 @@ from config import dp
 from handlers import client
 from handlers import extra
 from handlers import fsm_bot_ordering
-from database.bot_db import sql_create, register_callback_query
-
+from database.bot_db import sql_create, insert_data, request_db
+from handlers import callback
 # from handlers import fsm_bot2
+from handlers import add_photo_fsm
 
 async def on_startup(_):
     sql_create()
+    # insert_data()
 
 # fsm_bot2.register_handlers_ordering(dp)
-register_callback_query(dp)
+callback.register_callback_query_handlers(dp)
+add_photo_fsm.register_handlers_crud(dp)
 fsm_bot_ordering.register_handlers_ordering(dp)
 client.register_handlers_client(dp)
-# bot_db.request_db(dp)
+request_db(dp)
 # extra.register_handlers_extra(dp)
 
 
