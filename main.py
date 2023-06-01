@@ -15,9 +15,9 @@ async def on_startup(_):
 
 
 fsm_bot2.register_handlers_ordering(dp)
-callback.register_callback_query_handlers(dp)
+# callback.register_callback_query_handlers(dp)
 add_photo_fsm.register_handlers_crud(dp)
-# fsm_bot_ordering.register_handlers_ordering(dp)
+fsm_bot_ordering.register_handlers_ordering(dp)
 client.register_handlers_client(dp)
 request_db(dp)
 # extra.register_handlers_extra(dp)

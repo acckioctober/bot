@@ -6,7 +6,6 @@ from database.bot_db import get_button_names_from_product_table, \
 from aiogram.utils.exceptions import MessageNotModified
 from aiogram.utils.callback_data import CallbackData
 from contextlib import suppress
-
 def get_keyboard_for_start_order():
     ''''''
     keyboard = types.InlineKeyboardMarkup(row_width=1)
@@ -89,7 +88,7 @@ def keyboard_for_start_construction_cake():
 
 
 def keyboard_for_handle_sort_callback(field):
-    sorted_data = get_sorted_data_from_db(field)  # Получаем отсортированные данные из базы данных
+    sorted_data = get_sorted_data_from_db(field) # Получаем отсортированные данные из базы данных
     keyboard = types.InlineKeyboardMarkup(row_width=1)
     for data in sorted_data:
         callback_data = f'get_this_{data[0]}'  # Формируем значение callback_data
@@ -195,3 +194,6 @@ def get_keyboard():
     keyboard = types.InlineKeyboardMarkup(row_width=2)
     keyboard.add(*buttons)
     return keyboard
+
+
+
