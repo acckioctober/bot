@@ -196,4 +196,13 @@ def get_keyboard():
     return keyboard
 
 
+def get_ban_button():
+    # Генерация клавиатуры для администратора.
+    buttons = [
+        types.InlineKeyboardButton(text="Забанить", callback_data="ban"),
+        types.InlineKeyboardButton(text="Разбанить", callback_data="unban"),
+    ]
+    keyboard = types.InlineKeyboardMarkup(row_width=2)
+    keyboard.add(*buttons)
+    return keyboard
 

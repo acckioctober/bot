@@ -20,7 +20,7 @@ add_photo_fsm.register_handlers_crud(dp)
 fsm_bot_ordering.register_handlers_ordering(dp)
 client.register_handlers_client(dp)
 request_db(dp)
-# extra.register_handlers_extra(dp)
+extra.register_handlers_extra(dp)
 
 apscheduler.register_handlers_apscheduler(dp)
 
